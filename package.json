@@ -1,6 +1,6 @@
 {
   "name": "@hytaleone/query",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Query Hytale servers using the UDP query protocol",
   "type": "module",
   "main": "./dist/index.cjs",
