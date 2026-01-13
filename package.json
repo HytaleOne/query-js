@@ -1,0 +1,51 @@
+{
+  "name": "@hytaleone/query",
+  "version": "1.0.0",
+  "description": "Query Hytale servers using the UDP query protocol",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "hytale",
+    "query",
+    "server",
+    "udp",
+    "status",
+    "ping"
+  ],
+  "author": "HytaleOne",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/HytaleOne/query-js"
+  },
+  "homepage": "https://hytale.one",
+  "engines": {
+    "node": ">=18"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "tsup": "^8.0.0",
+    "typescript": "^5.0.0"
+  }
+}
