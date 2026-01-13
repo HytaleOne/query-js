@@ -22,10 +22,17 @@ function sendQuery(
   return new Promise((resolve, reject) => {
     const socket = dgram.createSocket('udp4');
     let timeoutHandle: NodeJS.Timeout;
+    let closed = false;
 
     const cleanup = () => {
+      if (closed) return;
+      closed = true;
       clearTimeout(timeoutHandle);
-      socket.close();
+      try {
+        socket.close();
+      } catch {
+        // Already closed
+      }
     };
 
     socket.on('message', (msg) => {
