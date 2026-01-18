@@ -1,6 +1,18 @@
 # @hytaleone/query
 
-Query Hytale servers using the UDP query protocol.
+[![npm version](https://img.shields.io/npm/v/@hytaleone/query.svg)](https://www.npmjs.com/package/@hytaleone/query)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+Query Hytale servers using the UDP query protocol. Get server status, player count, player list, and plugin information.
+
+## Features
+
+- **Server Status** - Get server name, MOTD, version, player count
+- **Player List** - Retrieve online players with names and UUIDs
+- **Plugin List** - See installed plugins with versions
+- **Zero dependencies** - Uses only Node.js built-in modules
+- **TypeScript** - Full type definitions included
+- **Dual format** - Works with both ESM and CommonJS
 
 ## Installation
 
@@ -62,6 +74,10 @@ const info = await query('localhost', 5520, {
 ## License
 
 MIT
+
+## Related
+
+- [@hytaleone/votifier](https://www.npmjs.com/package/@hytaleone/votifier) - Send votes to Hytale and Minecraft servers
 
 ---
 
